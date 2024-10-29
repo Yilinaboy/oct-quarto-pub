@@ -3,7 +3,7 @@
     "path": "~/Downloads/oct-quarto-pub/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "0",
+    "hash": "3864815281",
     "contents": "",
     "dirty": false,
     "created": 1730173173322.0,
@@ -11,14 +11,16 @@
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "2,18",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1730173170,
+    "lastKnownWriteTime": 1730174167,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1730173170,
+    "last_content_update": 1730174167957,
     "read_only": false,
     "read_only_alternatives": []
 }
