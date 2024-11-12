@@ -1,11 +1,13 @@
 ---
-title: "oct-quarto-pub"
+title: "Preliminary Results"
+format: html
 ---
 
-This is a Quarto website.
+![](figure%201.pdf){width=200%}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
-```
+
+
+
+
+![](figure%202.pdf){width=200%}

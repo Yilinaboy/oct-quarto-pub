@@ -1,9 +1,45 @@
 ---
-title: "About"
+title: "Weekly Report"
+author: "Yiln Wang"
+institute: "Singapore Management University"
+date: today
+format: html
+bibliography: references.bib
 ---
 
-About this site
+## Coding for Journal Rank
 
-```{r}
-1 + 1
-```
+Apart from top five economic journal, I have used a formula based on the formula provided by [@combes] and based on recommendations by NYU economic departments to decide the rank of different journals.
+
+-   T5 econ journal (1)
+-   Prestigious Econ and General Journals (e.g., Science/Nature) (2)
+-   Tier A field journals (3)
+-   Tier B field Journals (4)
+-   Good review: such as NEBR and Economic Letters (5)
+-   Tier C Journals (6)
+-   Tier D Journals (7)
+-   Normal Review: conferences like SSRN, University Press and Books (8)
+-   Ineffective Review: Working papers + unpublished manuscript (9)
+
+## Preliminary Results
+
+We used propensity score matching to estimate the average marginal effect of the journal type on scholars' tenure track status accounting for confounding by the included covariate. We first attempted 1:1 nearest neighbor propensity score matching without replacement with a propensity score estimated using logistic regression of the journal type on covariates. This matching specification yielded adequate balance. The propensity score was estimated using a probit regression of the treatment on the covariates, which yielded better balance than did a logistic regression. After matching, all standardized mean diﬀerences for the covariates were below 0.1 and all standardized mean diﬀerences for squares and two-way interactions between covariates were below .15, indicating adequate balance. Full matching uses all treated and all control units, so no units were discarded by the
+matching.
+
+To estimate the journal type eﬀect and its standard error, we fit a linear regression model with tenure status as the outcome and journal type, covariates, and their interaction as predictors and included the full matching weights in the estimation. The lm() function was used to fit the outcome. A cluster-robust variance was used to estimate its standard error with matching stratum
+membership as the clustering variable. Although there is no main effect found in the economic journal type on the probablity of getting tenured (p= .57), there is a significant interaction between economic journal type and journal rank (SE=.20, p=.04). Besides, there is also a significant interaction between journal type and university rank (SE=-0.017, p=.02). Finally, there is a significant effect of University rank on the outcome of getting tenured (SE=0.018, p=.002).
+
+## Problems
+
+### The definition of ethnicity
+
+-   When searching for scholars' racial background, is it about their race, ethnicity or nationality?
+-   For instance, if a person who was born in Latin America but has a surname with Spanish Origin, do we define this scholar as Caucasian, Hispanic, Latino?
+-   In another case, there are some American-born Korean as well as Korean-born scholars either being tenured or untenured from the dataset, but how can I identify their racial background? Shall I regard them as Eastern Asian, Korean or Americans with Korean origin?
+
+### Problems for Searching Scholars' Age
+
+Most CV did not include scholars' birth year and I can only infer their age based on the first year they entered the University (17 or 18 years old). However, considering that some countries like Singapore mandate military services, it is really hard for me to give an accurate record of these scholars' age. Furthermore, many westerners take a gap year to travel abroad or even get as a part-time/full-time job before their univesrity, so it is still hard for me to correctly reflect female scholars' age. Finally, given that there is no explicit rules for age restriction in applying for a tenured position in North America, I just wonder if we may exclude age as a covariate in this case?
+
+
+# References
